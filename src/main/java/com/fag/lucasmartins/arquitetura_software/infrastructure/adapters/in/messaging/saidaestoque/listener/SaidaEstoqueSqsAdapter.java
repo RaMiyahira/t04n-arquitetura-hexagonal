@@ -7,9 +7,11 @@ import com.fag.lucasmartins.arquitetura_software.infrastructure.adapters.in.mess
 import io.awspring.cloud.sqs.annotation.SqsListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 @Component
+@ConditionalOnProperty(name = "aws.sqs.queue.saida-estoque.enabled", havingValue = "true")
 public class SaidaEstoqueSqsAdapter {
 
     private static final Logger log = LoggerFactory.getLogger(SaidaEstoqueSqsAdapter.class);
