@@ -9,7 +9,6 @@ import com.fag.lucasmartins.arquitetura_software.infrastructure.adapters.out.per
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
-import java.util.UUID;
 
 @Repository
 public class PessoaRepositoryAdapter implements PessoaRepositoryPort {
